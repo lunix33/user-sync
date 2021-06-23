@@ -49,3 +49,13 @@ It is important to run the application as `root` since the application needs to 
 
 * You need to define all the groups even default primary groups.
 * The application allows conflicting UID and GID.
+
+## Build & install
+
+To build and install, you'll need to have the Rust compiler (w/ cargo) installed.
+
+Simply run the following command to build and install the application your system:
+
+```sh
+cargo install --path .
+```
