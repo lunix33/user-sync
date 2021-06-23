@@ -1,0 +1,48 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'user-sync'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=user-sync",
+					"--package=user-sync"
+				],
+				"filter": {
+					"name": "user-sync",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"env": {
+				"USER_SYNC": "./user_sync.json"
+			},
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'user-sync'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=user-sync",
+					"--package=user-sync"
+				],
+				"filter": {
+					"name": "user-sync",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}
