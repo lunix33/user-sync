@@ -73,10 +73,10 @@ fn add_user(add_users: &Vec<User>) {
         }
 
         // Compose arguments.
-        let mut args: Vec<String> = vec![];
+        let mut args: Vec<String> = vec![s!("--create-home"), s!("--no-user-group")];
 
         // Primary group.
-        let primary = &user.groups[1];
+        let primary = &user.groups[0];
         args.push(s!("--gid"));
         args.push(primary.clone());
 
